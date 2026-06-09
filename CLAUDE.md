@@ -2,6 +2,26 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## ⚑ Kvadrant fork notes (read first)
+
+This is **Kvadrant's fork of Twenty** (`origin` = `efedesat/twenty`, `upstream` = `twentyhq/twenty`),
+used for the **fork-and-build-deeply, one-branch-per-client** model (bespoke CRM per client on the
+client's own EU cloud; billing implementation + managed services, not licences).
+
+- **Push to `origin` (the fork), never `upstream`.** `upstream` is the public twentyhq repo.
+- **Per-client work = its own branch** off the baseline; deep core edits are expected. Backporting
+  upstream **security** fixes into a frozen client fork is a billable managed-service deliverable —
+  keep it separable from feature merges.
+- **Operational source of truth = the sibling `crm-tooling` repo** (`../` on disk =
+  `github.com/efedesat/crm-tooling`). Read its `PROJECT.md`, `TWENTY-OPERATIONS.md` (hard-won gotchas
+  for the running image), and `ENTERPRISE-LIMITATIONS.md` before doing source work.
+- **The Scandic demo runs on the prebuilt `twentycrm/twenty:latest` image, not this source — and the
+  image can LAG this source** (e.g. a manual single-record trigger exposes the record's fields to Code
+  steps here, but not on the running image). Verify against whatever is actually deployed.
+- Dev env to build from source: Node **24.5** (`.nvmrc`) + **Yarn 4**.
+
+_Upstream Twenty guidance follows._
+
 ## Project Overview
 
 Twenty is an open-source CRM built with modern technologies in a monorepo structure. The codebase is organized as an Nx workspace with multiple packages.
