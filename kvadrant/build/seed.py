@@ -91,7 +91,7 @@ for c in load("contacts"):
          "jobTitle":c.get("jobTitle"), "contactRole":c.get("role"),
          "_key": f'{c["firstName"]} {c["lastName"]}'}
     if c.get("email"): r["emails"] = {"primaryEmail": c["email"]}
-    if c.get("phone"): r["phones"] = {"primaryPhoneNumber": c["phone"], "primaryPhoneCountryCode":"SE"}
+    if c.get("phone"): r["phones"] = {"primaryPhoneNumber": c["phone"]}  # let country infer from +prefix (Nordic numbers conflict with a forced SE)
     if c.get("accountRef") in acc: r["companyId"] = acc[c["accountRef"]]
     ppl_rows.append({k:v for k,v in r.items() if v is not None})
 seed("people", ppl_rows)

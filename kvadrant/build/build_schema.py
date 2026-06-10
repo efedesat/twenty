@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Idempotent schema builder for the Scandic Group & Meeting demo (metadata API)."""
-import json, urllib.request, sys, os
+import json, urllib.request, sys, os, uuid
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 KEY = open(os.path.join(HERE, ".apikey")).read().strip()
@@ -47,6 +47,31 @@ def add_field(objs, obj_ns, obj_id, name, label, ftype, icon="IconTag", options=
     r = gql("mutation($f:CreateFieldInput!){ createOneField(input:{field:$f}){ id } }", {"f": f})
     print(f"  {obj_ns}.{name} ({ftype}):", "CREATED" if ("data" in r and r["data"]) else r.get("errors"))
 
+def set_stage_options():
+    # v2.10 ships default opportunity stages (NEW/SCREENING/...); the Scandic MICE
+    # pipeline needs its own. Replace the standard `stage` SELECT options.
+    STAGES = [("Lead","LEAD","gray"),("Qualified","QUALIFIED","blue"),("Tentative","TENTATIVE","yellow"),
+              ("Proposal Sent","PROPOSAL_SENT","orange"),("Definite","DEFINITE","green"),
+              ("Delivery","DELIVERY","turquoise"),("Completed","COMPLETED","sky"),("Follow Up","FOLLOW_UP","red")]
+    # find the opportunity object id (a multi-object fields query truncates nested
+    # fields server-side, so scope the field lookup to this one object via id filter)
+    d = gql("query{ objects(paging:{first:300}){ edges{ node{ id nameSingular } } } }")
+    opp_id = next((e["node"]["id"] for e in d["data"]["objects"]["edges"]
+                   if e["node"]["nameSingular"] == "opportunity"), None)
+    if not opp_id:
+        print("  opportunity object NOT FOUND"); return
+    d2 = gql("query($id:UUID!){ objects(paging:{first:1},filter:{id:{eq:$id}}){ edges{ node{ fields(paging:{first:300}){ edges{ node{ id name } } } } } } }", {"id": opp_id})
+    fid = next((fe["node"]["id"] for fe in d2["data"]["objects"]["edges"][0]["node"]["fields"]["edges"]
+                if fe["node"]["name"] == "stage"), None)
+    if not fid:
+        print("  stage field NOT FOUND"); return
+    # include option ids + bump defaultValue: replacing options while default still
+    # points at a removed value (e.g. 'NEW') is rejected by metadata validation
+    opts = [{"id":str(uuid.uuid4()),"label":l,"value":v,"color":c,"position":i} for i,(l,v,c) in enumerate(STAGES)]
+    r = gql("mutation($id:UUID!,$u:UpdateFieldInput!){ updateOneField(input:{id:$id,update:$u}){ id } }",
+            {"id": fid, "u": {"options": opts, "defaultValue": "'LEAD'"}})
+    print("  Enquiry stage options:", "UPDATED" if ("data" in r and r["data"]) else r.get("errors"))
+
 def main():
     objs = objects()
     # --- rename standard objects (labels only) ---
@@ -56,7 +81,9 @@ def main():
     rename(objs["opportunity"]["id"], "Enquiry", "Enquiries")
     # --- create custom objects ---
     print("== objects ==")
-    ids = {ns: objs[ns]["id"] for ns in ("hotel","meetingRoom","opportunity","company","person") if ns in objs}
+    ids = {ns: objs[ns]["id"] for ns in ("opportunity","company","person") if ns in objs}
+    ids["hotel"] = ensure_object(objs, "hotel","hotels","Hotel","Hotels","IconBuilding")
+    ids["meetingRoom"] = ensure_object(objs, "meetingRoom","meetingRooms","Meeting Room","Meeting Rooms","IconDoor")
     ids["roomBlock"] = ensure_object(objs, "roomBlock","roomBlocks","Room Block","Room Blocks","IconBed")
     ids["quote"] = ensure_object(objs, "quote","quotes","Quote","Quotes","IconFileInvoice")
     ids["corporateAgreement"] = ensure_object(objs, "corporateAgreement","corporateAgreements","Corporate Agreement","Corporate Agreements","IconContract")
@@ -78,8 +105,14 @@ def main():
     for n,l in [("winLossReason","Win/Loss Reason"),("competitorHotel","Competitor Hotel"),("operaBlockCode","OPERA Block Code"),("operaConfirmationNo","OPERA Confirmation #")]:
         F("opportunity",n,l,"TEXT",icon="IconFileText")
 
+    SEG = [("Corporate","CORPORATE","blue"),("Association","ASSOCIATION","green"),("Conference","CONFERENCE","purple"),("Government","GOVERNMENT","orange"),("Incentive","INCENTIVE","turquoise"),("Sports","SPORTS","red")]
+    F("opportunity","segment","Segment","SELECT",icon="IconCategory2",options=SEG)
+    F("opportunity","hotel","Hotel","RELATION",icon="IconBuilding",rel=REL(("hotel","Enquiries","IconCalendarEvent")))
+
     print("== Hotel fields ==")
     F("hotel","country","Country","TEXT",icon="IconFlag")
+    F("hotel","city","City","TEXT",icon="IconMapPin")
+    F("hotel","brand","Brand","TEXT",icon="IconBuildingStore")
     for n,l in [("totalMeetingM2","Total Meeting m²"),("largestRoomCapacity","Largest Room Capacity"),("numberOfBedrooms","Bedrooms"),("numberOfMeetingRooms","Meeting Rooms"),("distanceToAirportKm","Distance to Airport (km)")]:
         F("hotel",n,l,"NUMBER",icon="IconNumber")
     F("hotel","sustainabilityCert","Sustainability Cert","TEXT",icon="IconLeaf")
@@ -88,6 +121,7 @@ def main():
     for n,l in [("sizeM2","Size m²"),("capacityTheatre","Theatre"),("capacityClassroom","Classroom"),("capacityBanquet","Banquet"),("capacityBoardroom","Boardroom"),("capacityReception","Reception"),("fullDayHire","Full-day Hire")]:
         F("meetingRoom",n,l,"NUMBER",icon="IconNumber")
     F("meetingRoom","naturalDaylight","Natural Daylight","BOOLEAN",icon="IconSun")
+    F("meetingRoom","hotel","Hotel","RELATION",icon="IconBuilding",rel=REL(("hotel","Meeting Rooms","IconDoor")))
 
     print("== Room Block fields ==")
     F("roomBlock","hotel","Hotel","RELATION",icon="IconBuilding",rel=REL(("hotel","Room Blocks","IconBed")))
@@ -131,6 +165,18 @@ def main():
     for n,l in [("quantity","Quantity"),("unitRate","Unit Rate"),("lineTotal","Line Total")]:
         F("quoteLine",n,l,"NUMBER",icon="IconNumber")
     F("quoteLine","basis","Pricing Basis","TEXT",icon="IconFileText")
+
+    print("== Account fields ==")
+    F("company","employees","Employees","NUMBER",icon="IconUsers")
+    F("company","segment","Segment","SELECT",icon="IconCategory2",options=SEG)
+    F("company","city","City","TEXT",icon="IconMapPin")
+    F("company","country","Country","TEXT",icon="IconFlag")
+
+    print("== Contact fields ==")
+    F("person","contactRole","Contact Role","TEXT",icon="IconUserCog")
+
+    print("== Enquiry stage options (MICE pipeline) ==")
+    set_stage_options()
     print("DONE")
 
 main()
