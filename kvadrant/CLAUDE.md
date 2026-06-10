@@ -17,8 +17,14 @@ not in a separate repo. Business model: bespoke CRM per client on the client's o
 - The demo runs on the **prebuilt `twentycrm/twenty:latest` image** (set by `TAG` in the docker `.env`),
   which may lag the `../packages/` source — verify behaviour against what's actually running.
 
+## Client source documents (read before designing)
+- **`scandic-source/`** — drop Scandic briefs, specs, and reference material here. **Git-ignored** (never
+  committed — client/proprietary). If present, **read everything in it first** to ground CRM design
+  decisions in the client's actual requirements. Empty/absent on a fresh clone.
+
 ## Read these for detail (don't duplicate them here)
 - **`SETUP.md`** — clone, run the stack, restore the Scandic snapshot, re-snapshot when it changes.
+- **`docs/SCANDIC-ON-SOURCE.md`** — how to run the full Scandic env on a from-source instance (DB copy + the 4 gotchas).
 - **`docs/PROJECT.md`** — canonical: vision, licensing, architecture, the demo, status.
 - **`docs/TWENTY-OPERATIONS.md`** — the living **gotchas / do's & don'ts** log for the running image.
   Read before scripting metadata, seeding, views, or workflows. Add to it when you learn something.
