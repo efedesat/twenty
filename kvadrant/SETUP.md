@@ -60,6 +60,34 @@ git push
 Teammates pull and re-run `db_restore.sh` to get the new state. This is how the demo stays in sync
 across laptops.
 
+## Runtime image: stock now, Kvadrant-built later
+
+There are **two separate "Twenty"s** in this repo — don't confuse them:
+
+1. **The source code** (`packages/`) — what you `git pull` and rebase from upstream. For deep code work.
+2. **The runtime image** (`twentycrm/twenty:${TAG}`) — a **prebuilt, official** image from Docker Hub.
+   It is **NOT built from this fork.** `git pull` does not change it; `TAG` does.
+
+**Today the demo runs the stock image (`v2.8.3`), not our fork's code.** It works because Twenty is
+metadata-driven: the Scandic customizations (objects, fields, views, workflows) live as *data* in
+Postgres, which is why the DB snapshot can capture the whole demo. There is **no custom code** in the
+running container yet.
+
+`TAG` is pinned to `v2.8.3` so every machine runs the exact image the snapshot was taken on. **Do not
+bump `TAG` without re-taking the snapshot** on the new version (boot the new image, let it migrate,
+re-run `db_dump.sh`).
+
+**When we start building the deep modules** (Service Desk, Marketing, Pricing/CPQ as first-class core
+modules), the stock image won't contain that code. At that point we switch to building our **own**
+image from this fork:
+
+1. `docker build` against `packages/` → tag e.g. `kvadrant/twenty:<version>`
+2. Point the compose `image:` at that instead of `twentycrm/twenty`
+3. Run and snapshot against our own image
+
+So the pin to an upstream version is a placeholder for the metadata-only phase; the fork-and-build
+model ultimately means **we publish and run our own image**.
+
 ## Layout
 
 ```
