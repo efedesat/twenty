@@ -16,31 +16,33 @@ cd twenty
 
 That's it — no second repo. The old `crm-tooling` repo has been folded into `kvadrant/`.
 
-## 2. Start the stack
+## 2. Start the database only
+
+The Scandic snapshot must be restored **before the server first boots** — otherwise the server
+initializes its own empty workspace and collides with the restore. So bring up just the `db`:
 
 ```bash
 # macOS:
 colima start
 cd packages/twenty-docker
 cp .env.example .env        # then fill in the secrets (see below)
-docker compose up -d        # http://localhost:3000
+docker compose up -d db     # database only, not the server yet
 ```
 
-Wait until `docker compose ps` shows `server` healthy, then open http://localhost:3000.
-
-## 3. Load the Scandic environment
+## 3. Load the Scandic environment, then start the rest
 
 The demo environment (custom objects, fields, views, **all records, and the workflows**) is captured
 as a full database snapshot — **not** rebuilt from scripts. This is the source of truth for the demo.
 
 ```bash
-# from the repo root, with the stack up:
+# from the repo root, with only the db running:
 kvadrant/build/db_restore.sh
-docker compose -f packages/twenty-docker/docker-compose.yml restart server worker
+docker compose -f packages/twenty-docker/docker-compose.yml up -d   # now bring up server + worker
 ```
 
-Restoring the snapshot is the *only* step needed — you do **not** need to run `build_schema.py` /
-`seed.py` on a fresh machine. Those scripts are for *evolving* the schema, not bootstrapping.
+Open http://localhost:3000 once `docker compose ps` shows `server` healthy. Restoring the snapshot is
+the *only* data step — you do **not** need to run `build_schema.py` / `seed.py` on a fresh machine.
+Those scripts are for *evolving* the schema, not bootstrapping.
 
 > **Snapshot ↔ image TAG:** restore a snapshot into the same Twenty image `TAG` it was taken on
 > (see `packages/twenty-docker/.env`). A much newer image can trip schema migrations.
