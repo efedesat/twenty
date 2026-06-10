@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Quote – Volvo Group AGM v1",
+    "enquiryRef": "Volvo Group AGM 2026",
+    "version": 1,
+    "totalValue": 1185000,
+    "dayDelegateRateOffered": 695,
+    "validUntil": "2026-04-15",
+    "status": "DECLINED"
+  },
+  {
+    "name": "Quote – Volvo Group AGM v2",
+    "enquiryRef": "Volvo Group AGM 2026",
+    "version": 2,
+    "totalValue": 1218000,
+    "dayDelegateRateOffered": 695,
+    "validUntil": "2026-04-30",
+    "status": "ACCEPTED"
+  },
+  {
+    "name": "Quote – Ericsson Leadership Forum v1",
+    "enquiryRef": "Ericsson Leadership Forum Q3 2026",
+    "version": 1,
+    "totalValue": 820000,
+    "dayDelegateRateOffered": 945,
+    "validUntil": "2026-06-10",
+    "status": "DECLINED"
+  },
+  {
+    "name": "Quote – Ericsson Leadership Forum v2",
+    "enquiryRef": "Ericsson Leadership Forum Q3 2026",
+    "version": 2,
+    "totalValue": 784500,
+    "dayDelegateRateOffered": 895,
+    "validUntil": "2026-06-20",
+    "status": "SENT"
+  },
+  {
+    "name": "Quote – Novo Nordisk Diabetes Congress v1",
+    "enquiryRef": "Novo Nordisk Diabetes Congress 2026",
+    "version": 1,
+    "totalValue": 2140000,
+    "dayDelegateRateOffered": 1095,
+    "validUntil": "2026-03-10",
+    "status": "ACCEPTED"
+  },
+  {
+    "name": "Quote – Maersk Senior Leadership Offsite v1",
+    "enquiryRef": "Maersk Senior Leadership Offsite",
+    "version": 1,
+    "totalValue": 548000,
+    "dayDelegateRateOffered": 1195,
+    "validUntil": "2026-06-25",
+    "status": "SENT"
+  },
+  {
+    "name": "Quote – Equinor Energy Transition Summit v1",
+    "enquiryRef": "Equinor Energy Transition Summit",
+    "version": 1,
+    "totalValue": 1680000,
+    "dayDelegateRateOffered": 1595,
+    "validUntil": "2026-06-10",
+    "status": "DECLINED"
+  },
+  {
+    "name": "Quote – Equinor Energy Transition Summit v2",
+    "enquiryRef": "Equinor Energy Transition Summit",
+    "version": 2,
+    "totalValue": 1620000,
+    "dayDelegateRateOffered": 1495,
+    "validUntil": "2026-06-25",
+    "status": "SENT"
+  },
+  {
+    "name": "Quote – Apex Incentive Programme v1",
+    "enquiryRef": "Apex Incentive Programme – Winter 2026",
+    "version": 1,
+    "totalValue": 890000,
+    "dayDelegateRateOffered": 1895,
+    "validUntil": "2026-07-01",
+    "status": "DRAFT"
+  },
+  {
+    "name": "Quote – Novo Nordisk Pharma Sales Kickoff v1",
+    "enquiryRef": "Novo Nordisk Pharma Sales Kickoff",
+    "version": 1,
+    "totalValue": 1180000,
+    "dayDelegateRateOffered": 1095,
+    "validUntil": "2025-11-15",
+    "status": "ACCEPTED"
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Volvo Group",
+    "domainName": "volvogroup.com",
+    "segment": "CORPORATE",
+    "city": "Gothenburg",
+    "country": "Sweden",
+    "employees": 100000
+  },
+  {
+    "name": "Maersk",
+    "domainName": "maersk.com",
+    "segment": "CORPORATE",
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "employees": 95000
+  },
+  {
+    "name": "Novo Nordisk",
+    "domainName": "novonordisk.com",
+    "segment": "CORPORATE",
+    "city": "Bagsvaerd",
+    "country": "Denmark",
+    "employees": 55000
+  },
+  {
+    "name": "Ericsson",
+    "domainName": "ericsson.com",
+    "segment": "CORPORATE",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "employees": 105000
+  },
+  {
+    "name": "Nordea",
+    "domainName": "nordea.com",
+    "segment": "CORPORATE",
+    "city": "Helsinki",
+    "country": "Finland",
+    "employees": 28000
+  },
+  {
+    "name": "SAS Group",
+    "domainName": "sasgroup.net",
+    "segment": "CORPORATE",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "employees": 9500
+  },
+  {
+    "name": "Equinor",
+    "domainName": "equinor.com",
+    "segment": "CORPORATE",
+    "city": "Stavanger",
+    "country": "Norway",
+    "employees": 21000
+  },
+  {
+    "name": "IKEA Group",
+    "domainName": "ingka.com",
+    "segment": "CORPORATE",
+    "city": "Malmö",
+    "country": "Sweden",
+    "employees": 175000
+  },
+  {
+    "name": "Scandinavian Society of Cardiology",
+    "domainName": "sscard.org",
+    "segment": "ASSOCIATION",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "employees": 35
+  },
+  {
+    "name": "Swedish Ministry of Finance",
+    "domainName": "regeringen.se",
+    "segment": "GOVERNMENT",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "employees": 500
+  },
+  {
+    "name": "Swedish Athletics Federation",
+    "domainName": "friidrott.se",
+    "segment": "SPORTS",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "employees": 80
+  },
+  {
+    "name": "Apex Event Solutions",
+    "domainName": "apexevents.se",
+    "segment": "INCENTIVE",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "employees": 45
+  },
+  {
+    "name": "Nordic Conference Partners",
+    "domainName": "nordiccp.dk",
+    "segment": "CONFERENCE",
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "employees": 22
+  },
+  {
+    "name": "Kone Corporation",
+    "domainName": "kone.com",
+    "segment": "CORPORATE",
+    "city": "Espoo",
+    "country": "Finland",
+    "employees": 60000
+  }
+]

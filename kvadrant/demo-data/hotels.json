@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Scandic Triangeln",
+    "city": "Malmö",
+    "country": "Sweden",
+    "brand": "SCANDIC",
+    "totalMeetingM2": 2800,
+    "largestRoomCapacity": 350,
+    "numberOfBedrooms": 317,
+    "numberOfMeetingRooms": 14,
+    "sustainabilityCert": "Nordic Swan Ecolabel",
+    "distanceToAirportKm": 23
+  },
+  {
+    "name": "Scandic Copenhagen",
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "brand": "SCANDIC",
+    "totalMeetingM2": 3200,
+    "largestRoomCapacity": 400,
+    "numberOfBedrooms": 486,
+    "numberOfMeetingRooms": 16,
+    "sustainabilityCert": "Nordic Swan Ecolabel",
+    "distanceToAirportKm": 9
+  },
+  {
+    "name": "Scandic Grand Central Stockholm",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "brand": "SIGNATURE",
+    "totalMeetingM2": 2100,
+    "largestRoomCapacity": 250,
+    "numberOfBedrooms": 391,
+    "numberOfMeetingRooms": 12,
+    "sustainabilityCert": "Nordic Swan Ecolabel",
+    "distanceToAirportKm": 42
+  },
+  {
+    "name": "Scandic Fornebu",
+    "city": "Oslo",
+    "country": "Norway",
+    "brand": "SCANDIC",
+    "totalMeetingM2": 3500,
+    "largestRoomCapacity": 500,
+    "numberOfBedrooms": 355,
+    "numberOfMeetingRooms": 18,
+    "sustainabilityCert": "Nordic Swan Ecolabel",
+    "distanceToAirportKm": 18
+  },
+  {
+    "name": "Scandic Marina Congress Center",
+    "city": "Helsinki",
+    "country": "Finland",
+    "brand": "SIGNATURE",
+    "totalMeetingM2": 9500,
+    "largestRoomCapacity": 2000,
+    "numberOfBedrooms": 480,
+    "numberOfMeetingRooms": 55,
+    "sustainabilityCert": "ISO 14001",
+    "distanceToAirportKm": 14
+  },
+  {
+    "name": "Scandic Göteborg Central",
+    "city": "Gothenburg",
+    "country": "Sweden",
+    "brand": "SCANDIC",
+    "totalMeetingM2": 1800,
+    "largestRoomCapacity": 200,
+    "numberOfBedrooms": 279,
+    "numberOfMeetingRooms": 10,
+    "sustainabilityCert": "Nordic Swan Ecolabel",
+    "distanceToAirportKm": 22
+  },
+  {
+    "name": "Scandic Berlin Potsdamer Platz",
+    "city": "Berlin",
+    "country": "Germany",
+    "brand": "SCANDIC",
+    "totalMeetingM2": 2200,
+    "largestRoomCapacity": 300,
+    "numberOfBedrooms": 563,
+    "numberOfMeetingRooms": 13,
+    "sustainabilityCert": "Green Key",
+    "distanceToAirportKm": 28
+  },
+  {
+    "name": "Scandic Park Stockholm",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "brand": "SCANDIC",
+    "totalMeetingM2": 1500,
+    "largestRoomCapacity": 180,
+    "numberOfBedrooms": 195,
+    "numberOfMeetingRooms": 8,
+    "sustainabilityCert": "Nordic Swan Ecolabel",
+    "distanceToAirportKm": 40
+  }
+]
