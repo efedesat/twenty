@@ -1,0 +1,10 @@
+[
+  { "name": "Rate Card – Scandic Triangeln 2026", "hotelRef": "Scandic Triangeln", "listDayDelegateRate": 795, "listRoomNightRate": 1895, "currencyCode": "SEK", "validFrom": "2026-01-01" },
+  { "name": "Rate Card – Scandic Copenhagen 2026", "hotelRef": "Scandic Copenhagen", "listDayDelegateRate": 1395, "listRoomNightRate": 1995, "currencyCode": "DKK", "validFrom": "2026-01-01" },
+  { "name": "Rate Card – Scandic Grand Central Stockholm 2026", "hotelRef": "Scandic Grand Central Stockholm", "listDayDelegateRate": 1095, "listRoomNightRate": 2195, "currencyCode": "SEK", "validFrom": "2026-01-01" },
+  { "name": "Rate Card – Scandic Fornebu 2026", "hotelRef": "Scandic Fornebu", "listDayDelegateRate": 1995, "listRoomNightRate": 2295, "currencyCode": "NOK", "validFrom": "2026-01-01" },
+  { "name": "Rate Card – Scandic Marina Congress Center 2026", "hotelRef": "Scandic Marina Congress Center", "listDayDelegateRate": 125, "listRoomNightRate": 185, "currencyCode": "EUR", "validFrom": "2026-01-01" },
+  { "name": "Rate Card – Scandic Göteborg Central 2026", "hotelRef": "Scandic Göteborg Central", "listDayDelegateRate": 895, "listRoomNightRate": 1795, "currencyCode": "SEK", "validFrom": "2026-01-01" },
+  { "name": "Rate Card – Scandic Berlin Potsdamer Platz 2026", "hotelRef": "Scandic Berlin Potsdamer Platz", "listDayDelegateRate": 135, "listRoomNightRate": 175, "currencyCode": "EUR", "validFrom": "2026-01-01" },
+  { "name": "Rate Card – Scandic Park Stockholm 2026", "hotelRef": "Scandic Park Stockholm", "listDayDelegateRate": 895, "listRoomNightRate": 1795, "currencyCode": "SEK", "validFrom": "2026-01-01" }
+]

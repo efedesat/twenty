@@ -1,0 +1,200 @@
+[
+  {
+    "firstName": "Anders",
+    "lastName": "Björklund",
+    "email": "anders.bjorklund@volvogroup.com",
+    "jobTitle": "SVP Corporate Affairs",
+    "phone": "+46 31 664 4201",
+    "role": "DECISION_MAKER",
+    "accountRef": "Volvo Group"
+  },
+  {
+    "firstName": "Malin",
+    "lastName": "Eriksson",
+    "email": "malin.eriksson@volvogroup.com",
+    "jobTitle": "Executive Assistant to CEO",
+    "phone": "+46 31 664 4350",
+    "role": "EXECUTIVE_ASSISTANT",
+    "accountRef": "Volvo Group"
+  },
+  {
+    "firstName": "Kristoffer",
+    "lastName": "Lindqvist",
+    "email": "kristoffer.lindqvist@volvogroup.com",
+    "jobTitle": "Global Events Manager",
+    "phone": "+46 31 664 4412",
+    "role": "EVENT_MANAGER",
+    "accountRef": "Volvo Group"
+  },
+  {
+    "firstName": "Sofie",
+    "lastName": "Andersen",
+    "email": "sofie.andersen@maersk.com",
+    "jobTitle": "Head of Internal Events",
+    "phone": "+45 33 63 3310",
+    "role": "EVENT_MANAGER",
+    "accountRef": "Maersk"
+  },
+  {
+    "firstName": "Lars",
+    "lastName": "Christensen",
+    "email": "lars.christensen@maersk.com",
+    "jobTitle": "Procurement Director",
+    "phone": "+45 33 63 3001",
+    "role": "PROCUREMENT",
+    "accountRef": "Maersk"
+  },
+  {
+    "firstName": "Camilla",
+    "lastName": "Rasmussen",
+    "email": "camilla.rasmussen@novonordisk.com",
+    "jobTitle": "Congress & Meetings Manager",
+    "phone": "+45 44 44 8821",
+    "role": "BOOKER",
+    "accountRef": "Novo Nordisk"
+  },
+  {
+    "firstName": "Henrik",
+    "lastName": "Holm",
+    "email": "henrik.holm@novonordisk.com",
+    "jobTitle": "VP People & Organisation",
+    "phone": "+45 44 44 8200",
+    "role": "DECISION_MAKER",
+    "accountRef": "Novo Nordisk"
+  },
+  {
+    "firstName": "Emma",
+    "lastName": "Svensson",
+    "email": "emma.svensson@ericsson.com",
+    "jobTitle": "Global Meetings & Events Lead",
+    "phone": "+46 10 714 0042",
+    "role": "EVENT_MANAGER",
+    "accountRef": "Ericsson"
+  },
+  {
+    "firstName": "Johan",
+    "lastName": "Magnusson",
+    "email": "johan.magnusson@ericsson.com",
+    "jobTitle": "Chief People Officer",
+    "phone": "+46 10 714 0001",
+    "role": "DECISION_MAKER",
+    "accountRef": "Ericsson"
+  },
+  {
+    "firstName": "Aino",
+    "lastName": "Mäkinen",
+    "email": "aino.makinen@nordea.com",
+    "jobTitle": "Event Coordinator",
+    "phone": "+358 9 1651 0043",
+    "role": "BOOKER",
+    "accountRef": "Nordea"
+  },
+  {
+    "firstName": "Mikael",
+    "lastName": "Virtanen",
+    "email": "mikael.virtanen@nordea.com",
+    "jobTitle": "Head of Corporate Communications",
+    "phone": "+358 9 1651 0210",
+    "role": "DECISION_MAKER",
+    "accountRef": "Nordea"
+  },
+  {
+    "firstName": "Ingrid",
+    "lastName": "Nilsson",
+    "email": "ingrid.nilsson@sasgroup.net",
+    "jobTitle": "Events & Hospitality Manager",
+    "phone": "+46 8 797 2200",
+    "role": "EVENT_MANAGER",
+    "accountRef": "SAS Group"
+  },
+  {
+    "firstName": "Tor",
+    "lastName": "Hansen",
+    "email": "tor.hansen@equinor.com",
+    "jobTitle": "Procurement Manager – Travel & Events",
+    "phone": "+47 51 99 0044",
+    "role": "PROCUREMENT",
+    "accountRef": "Equinor"
+  },
+  {
+    "firstName": "Britta",
+    "lastName": "Johansson",
+    "email": "britta.johansson@ingka.com",
+    "jobTitle": "Group Events Coordinator",
+    "phone": "+46 732 55 1100",
+    "role": "BOOKER",
+    "accountRef": "IKEA Group"
+  },
+  {
+    "firstName": "Petter",
+    "lastName": "Dahl",
+    "email": "petter.dahl@ingka.com",
+    "jobTitle": "VP Corporate Culture",
+    "phone": "+46 732 55 1009",
+    "role": "DECISION_MAKER",
+    "accountRef": "IKEA Group"
+  },
+  {
+    "firstName": "Katarina",
+    "lastName": "Lindberg",
+    "email": "k.lindberg@sscard.org",
+    "jobTitle": "Congress Coordinator",
+    "phone": "+46 8 5090 0133",
+    "role": "BOOKER",
+    "accountRef": "Scandinavian Society of Cardiology"
+  },
+  {
+    "firstName": "Erik",
+    "lastName": "Gustafsson",
+    "email": "erik.gustafsson@regeringen.se",
+    "jobTitle": "Head of Protocol & Events",
+    "phone": "+46 8 405 1001",
+    "role": "EVENT_MANAGER",
+    "accountRef": "Swedish Ministry of Finance"
+  },
+  {
+    "firstName": "Maria",
+    "lastName": "Öberg",
+    "email": "maria.oberg@friidrott.se",
+    "jobTitle": "Events & Sponsorship Manager",
+    "phone": "+46 8 699 6000",
+    "role": "EVENT_MANAGER",
+    "accountRef": "Swedish Athletics Federation"
+  },
+  {
+    "firstName": "Tobias",
+    "lastName": "Strand",
+    "email": "tobias.strand@apexevents.se",
+    "jobTitle": "Senior Account Manager",
+    "phone": "+46 73 824 5511",
+    "role": "BOOKER",
+    "accountRef": "Apex Event Solutions"
+  },
+  {
+    "firstName": "Charlotte",
+    "lastName": "Berg",
+    "email": "charlotte.berg@nordiccp.dk",
+    "jobTitle": "PCO Lead / Programme Director",
+    "phone": "+45 31 44 7755",
+    "role": "BOOKER",
+    "accountRef": "Nordic Conference Partners"
+  },
+  {
+    "firstName": "Petri",
+    "lastName": "Korhonen",
+    "email": "petri.korhonen@kone.com",
+    "jobTitle": "Corporate Travel & Events Manager",
+    "phone": "+358 204 75 0044",
+    "role": "EVENT_MANAGER",
+    "accountRef": "Kone Corporation"
+  },
+  {
+    "firstName": "Risto",
+    "lastName": "Leinonen",
+    "email": "risto.leinonen@kone.com",
+    "jobTitle": "SVP HR & Leadership",
+    "phone": "+358 204 75 0001",
+    "role": "DECISION_MAKER",
+    "accountRef": "Kone Corporation"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Block – Volvo Group AGM 2026",
+    "hotelRef": "Scandic Triangeln",
+    "enquiryRef": "Volvo Group AGM 2026",
+    "roomsPerNight": 91,
+    "nights": 2,
+    "ratePerNight": 1695,
+    "cutOffDate": "2026-08-14",
+    "pickup": 86,
+    "operaBlockId": "BLK-2026-0481"
+  },
+  {
+    "name": "Block – Ericsson Leadership Forum",
+    "hotelRef": "Scandic Grand Central Stockholm",
+    "enquiryRef": "Ericsson Leadership Forum Q3 2026",
+    "roomsPerNight": 55,
+    "nights": 2,
+    "ratePerNight": 1795,
+    "cutOffDate": "2026-08-07",
+    "pickup": 0,
+    "operaBlockId": "BLK-2026-0512"
+  },
+  {
+    "name": "Block – Ericsson Global Kickoff 2026",
+    "hotelRef": "Scandic Marina Congress Center",
+    "enquiryRef": "Ericsson Global Kickoff 2026",
+    "roomsPerNight": 180,
+    "nights": 2,
+    "ratePerNight": 145,
+    "cutOffDate": "2026-01-03",
+    "pickup": 174,
+    "operaBlockId": "BLK-2026-0301"
+  },
+  {
+    "name": "Block – Novo Nordisk Diabetes Congress",
+    "hotelRef": "Scandic Copenhagen",
+    "enquiryRef": "Novo Nordisk Diabetes Congress 2026",
+    "roomsPerNight": 280,
+    "nights": 3,
+    "ratePerNight": 1650,
+    "cutOffDate": "2026-10-10",
+    "pickup": 0,
+    "operaBlockId": "BLK-2026-0398"
+  },
+  {
+    "name": "Block – Equinor Energy Transition Summit",
+    "hotelRef": "Scandic Fornebu",
+    "enquiryRef": "Equinor Energy Transition Summit",
+    "roomsPerNight": 110,
+    "nights": 2,
+    "ratePerNight": 1995,
+    "cutOffDate": "2026-09-19",
+    "pickup": 0,
+    "operaBlockId": "BLK-2026-0534"
+  },
+  {
+    "name": "Block – IKEA Culture Days 2026",
+    "hotelRef": "Scandic Triangeln",
+    "enquiryRef": "IKEA Group Culture Days 2026",
+    "roomsPerNight": 70,
+    "nights": 2,
+    "ratePerNight": 1595,
+    "cutOffDate": "2026-03-20",
+    "pickup": 68,
+    "operaBlockId": "BLK-2026-0285"
+  },
+  {
+    "name": "Block – Kone Future Leaders",
+    "hotelRef": "Scandic Marina Congress Center",
+    "enquiryRef": "Kone Future Leaders Programme",
+    "roomsPerNight": 36,
+    "nights": 2,
+    "ratePerNight": 165,
+    "cutOffDate": "2026-05-01",
+    "pickup": 34,
+    "operaBlockId": "BLK-2026-0450"
+  },
+  {
+    "name": "Block – Novo Nordisk Pharma Sales Kickoff",
+    "hotelRef": "Scandic Copenhagen",
+    "enquiryRef": "Novo Nordisk Pharma Sales Kickoff",
+    "roomsPerNight": 76,
+    "nights": 2,
+    "ratePerNight": 1595,
+    "cutOffDate": "2026-01-23",
+    "pickup": 75,
+    "operaBlockId": "BLK-2026-0248"
+  }
+]

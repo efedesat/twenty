@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Volvo Group 2026 Agreement",
+    "accountRef": "Volvo Group",
+    "agreementYear": 2026,
+    "negotiatedRoomRate": 1595,
+    "roomNightCommitment": 400,
+    "roomNightsActualised": 268,
+    "discountPct": 12.5,
+    "renewalDate": "2026-10-01",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "Ericsson 2026 Agreement",
+    "accountRef": "Ericsson",
+    "agreementYear": 2026,
+    "negotiatedRoomRate": 1695,
+    "roomNightCommitment": 600,
+    "roomNightsActualised": 360,
+    "discountPct": 14.0,
+    "renewalDate": "2026-11-01",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "Novo Nordisk 2026 Agreement",
+    "accountRef": "Novo Nordisk",
+    "agreementYear": 2026,
+    "negotiatedRoomRate": 1495,
+    "roomNightCommitment": 500,
+    "roomNightsActualised": 152,
+    "discountPct": 10.0,
+    "renewalDate": "2026-12-01",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "Maersk 2026 Agreement",
+    "accountRef": "Maersk",
+    "agreementYear": 2026,
+    "negotiatedRoomRate": 1595,
+    "roomNightCommitment": 350,
+    "roomNightsActualised": 0,
+    "discountPct": 11.0,
+    "renewalDate": "2026-10-01",
+    "status": "NEGOTIATING"
+  },
+  {
+    "name": "IKEA Group 2026 Agreement",
+    "accountRef": "IKEA Group",
+    "agreementYear": 2026,
+    "negotiatedRoomRate": 1495,
+    "roomNightCommitment": 300,
+    "roomNightsActualised": 228,
+    "discountPct": 9.5,
+    "renewalDate": "2026-09-01",
+    "status": "ACTIVE"
+  },
+  {
+    "name": "Equinor 2025 Agreement",
+    "accountRef": "Equinor",
+    "agreementYear": 2025,
+    "negotiatedRoomRate": 1895,
+    "roomNightCommitment": 250,
+    "roomNightsActualised": 200,
+    "discountPct": 8.0,
+    "renewalDate": "2026-01-15",
+    "status": "EXPIRED"
+  }
+]
