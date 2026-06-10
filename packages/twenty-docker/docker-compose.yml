@@ -2,7 +2,7 @@ name: twenty
 
 services:
   server:
-    image: twentycrm/twenty:${TAG:-latest}
+    image: twentycrm/twenty:${TAG:-v2.8.3}
     volumes:
       - server-local-data:/app/packages/twenty-server/.local-storage
     ports:
@@ -61,7 +61,7 @@ services:
     restart: always
 
   worker:
-    image: twentycrm/twenty:${TAG:-latest}
+    image: twentycrm/twenty:${TAG:-v2.8.3}
     volumes:
       - server-local-data:/app/packages/twenty-server/.local-storage
     command: ["yarn", "worker:prod"]
